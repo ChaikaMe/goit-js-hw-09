@@ -9,7 +9,7 @@ function saveData() {
         email: form.elements.email.value.trim(),
         message: form.elements.message.value.trim(),
     }
-    if (data.email == "" && data.message == "") {
+    if (data.email === "" && data.message === "") {
         localStorage.removeItem('feedback-form-state');
     }
     else {
@@ -28,8 +28,8 @@ function pasteData() {
 
 function dataSubmit(event) {
     event.preventDefault();
-    if (form.elements.email.value.trim() == "" &&
-        form.elements.message.value.trim() == "") {
+    if (form.elements.email.value.trim() === "" ||
+        form.elements.message.value.trim() === "") {
         alert('Fill the form!')
     } else {
         console.log(JSON.parse(localStorage.getItem('feedback-form-state')));

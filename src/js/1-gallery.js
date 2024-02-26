@@ -86,14 +86,6 @@ const markup = images
   .join("");
   gallery.insertAdjacentHTML("beforeend", markup);
 
-// Prevent download
-const preventDownload = document.querySelectorAll('.gallery-link');
-preventDownload.forEach(image => {
-  image.addEventListener('click', (download) => {
-    download.preventDefault();
-  });
-});
-
 new SimpleLightbox('.gallery a', { 
   captionsData: 'alt',
   captionDelay: 250,
